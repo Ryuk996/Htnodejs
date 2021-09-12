@@ -12,6 +12,7 @@ const url ="mongodb://localhost:27017";
 const sendMail = require('./sendMail')
 const UserModule = require('./userModule')
 const {CLIENT_URL} = process.env
+const PORT = process.env.PORT || 3000
 
 mongoose.connect(url,{
     useNewUrlParser : true,
@@ -176,6 +177,6 @@ const createRefreshToken = (payload) => {
     return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {expiresIn: '7d'})
 }
 
-  app.listen(3003,function(){
+  app.listen(process.env.PORT||3003,function(){
     console.log('The app is listening in port 3003')
 })
