@@ -8,7 +8,7 @@ const mongodb = require('mongodb')
 const mongoClient = mongodb.MongoClient;
 const nodemailer = require("nodemailer");
 const mongoose = require('mongoose')
-const url ="mongodb://localhost:27017";
+const url ="mongodb+srv://Kira:ryuk@1996@cluster0.ipr1k.mongodb.net/?retryWrites=true&w=majority";
 const sendMail = require('./sendMail')
 const UserModule = require('./userModule')
 const {CLIENT_URL} = process.env
